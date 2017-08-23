@@ -1,254 +1,107 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Twenty by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/bootstrap.css" />
-		<link rel="stylesheet" href="assets/css/swiper.min.css" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body class="index">
-		<div id="page-wrapper">
+<!doctype html>
+<html class="no-js" lang="" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>eduplana – Assessing Education Quality in Nigeria</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-			<!-- Header -->
-				<header id="header" class="">
-					<div class="container clearfix">
-						<div class="logo">
-							<img src="images/logo.png" alt="">
-						</div>
-						<nav id="nav">
-							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-								<li class="submenu">
-									<a href="#">About Us</a>
-									<ul>
-										<li><a href="left-sidebar.html">Our Solutions</a></li>
-										<li><a href="right-sidebar.html">2017 Education Fund</a></li>
-										<li><a href="no-sidebar.html">Get Involved</a></li>
-									</ul>
-								</li>
-								<li class=""><a href="">Data</a></li>
-								<li class=""><a href="">Infographics</a></li>
-								<li class=""><a href="contact.html">Contact</a></li>
-								<li class=""><a href="">Blog</a></li>
-							</ul>
-						</nav>
-					</div>
-				</header>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
 
-			<!-- Banner -->
-			<section class="banner headerTop">
-				<div class="swiper-container">
-			        <div class="swiper-wrapper">
-			            <div class="swiper-slide" style="background-image: url('images/student.png')">
-			                <div class="overlay">
-			                    <div class="col-md-8 col-md-offset-2">
-			                    	<div class="caption">DEVELOP AN OUT-OF-SCHOOL CHILD</div>
-				                    <div class="smallCaption">The ability to improve student skills to overcome different challenges they face in their family, community and academics</div>
-				                    <a href="#" class="Dbtn">Read More</a>
-			                    </div>
-			                </div>
-			            </div>
-			            <div class="swiper-slide" style="background-image: url('images/b.jpg')">
-			                <div class="overlay">
-			                    <div class="col-md-8 col-md-offset-2">
-			                    	<div class="caption">Education Shapes the Future</div>
-				                    <div class="smallCaption">See how education has shaped the future for young people in GPE partner developing countries</div>
-				                    <a href="#" class="Dbtn">Read More</a>
-			                    </div>
-			                </div>
-			            </div>
-			            <div class="swiper-slide" style="background-image: url('images/s.jpg')">
-			                <div class="overlay">
-			                    <div class="col-md-8 col-md-offset-2">
-			                    	<div class="caption">The Voices of Youth are Essential </div>
-				                    <div class="smallCaption">We applaud young people’s efforts in making their voice heard and influencing education policies</div>
-				                    <a href="#" class="Dbtn">Read More</a>
-			                    </div>
-			                </div>
-			            </div>
-			        </div>
-			        <!-- Add Pagination -->
-			        <div class="swiper-pagination"></div>
-			        <!-- Add Arrows -->
-			        <!-- <div class="swiper-button-next"></div>
-			        <div class="swiper-button-prev"></div> -->
-			    </div>
-			</section>
+        <link rel="stylesheet" href="assets/css/bootstrap.css" />
+        <link rel="stylesheet" href="assets/css/swiper.min.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
 
-			<!-- Main -->
-				<article id="main">
+    </head>
+    <body ng-controller="generalController">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-					<header class="special container">
-						<span class="icon fa fa-graduation-cap"></span>
-						<h2><strong>OUR SOLUTION</strong></h2>
-						<br />
-						Eduplan aims to develop soft skills training in students to reduce out-of-school children in rural communities. By developing their mental abilities, they can develop the skills to overcome different life challenges in their family, school and community.
-						
-					</header>
+        <!-- Add your site or application content here -->
+        
+        <div id="page-wrapper">
 
-					<!-- One -->
-						<section class="hidden-sm hidden-xs wrapper style2 container special-alt" style="background-image: url('images/info.png');">
-							<div class="row 50%">
-								
-							</div>
-						</section>
+            <!-- Header -->
+                <header id="header" class="">
+                    <div class="container clearfix">
+                        <div class="logo">
+                            <a href="/"><img src="images/logo.png" alt=""></a>
+                        </div>
+                        <nav id="nav">
+                            <ul>
+                                <li ng-class="getClass('/index')" class="current"><a ui-sref="index">Home</a></li>
+                                <li class="submenu">
+                                    <a ui-sref="about">About Us</a>
+                                    <ul>
+                                        <li><a href="left-sidebar.html">Our Solutions</a></li>
+                                        <li><a href="right-sidebar.html">2017 Education Fund</a></li>
+                                        <li><a href="no-sidebar.html">Get Involved</a></li>
+                                    </ul>
+                                </li>
+                                <li class=""><a ui-sref="data">Data</a></li>
+                                <li class=""><a ui-sref="infographics">Infographics</a></li>
+                                <li class=""><a ui-sref="contact">Contact</a></li>
+                                <li class=""><a ui-sref="blog">Blog</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
 
-					<!-- Two -->
-						<section class="wrapper style1 container special">
-							<div class="row">
-								<div class="4u 12u(narrower)">
+                
+                <div id="main">
+                    <div ui-view></div>
+                </div>
 
-									<section>
-										<span class="icon featured fa fa-graduation-cap"></span>
-										<header>
-											<h3>Education Fund</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-									</section>
+            <!-- Footer -->
+                <footer id="footer">
 
-								</div>
-								<div class="4u 12u(narrower)">
+                    <ul class="icons">
+                        <li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
+                        <li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
+                        <li><a href="#" class="icon circle fa-dribbble"><span class="label">Dribbble</span></a></li>
+                    </ul>
 
-									<section>
-										<span class="icon featured fa fa-book"></span>
-										<header>
-											<h3>Learning Facilities</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-									</section>
+                    <ul class="copyright">
+                        <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    </ul>
 
-								</div>
-								<div class="4u 12u(narrower)">
+                </footer>
 
-									<section>
-										<span class="icon featured fa fa-bar-chart"></span>
-										<header>
-											<h3>Performance Indicators</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-									</section>
+        </div>
 
-								</div>
-							</div>
-						</section>
 
-					<!-- Three -->
-						<section class="wrapper style3 container special">
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollgress.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/swiper.jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/angularjs/angular.min.js"></script>
+        <script src="assets/js/angularjs/angular-animate.js"></script>
+        <script src="assets/js/angularjs/angular-ui-router.min.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/controllers/generalController.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
 
-							<header class="major">
-								<h2>Next look at this <strong>cool stuff</strong></h2>
-							</header>
 
-							<div class="row">
-								<div class="6u 12u(narrower)">
-
-									<section>
-										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-										<header>
-											<h3>A Really Fast Train</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-									</section>
-
-								</div>
-								<div class="6u 12u(narrower)">
-
-									<section>
-										<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>An Airport Terminal</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-									</section>
-
-								</div>
-							</div>
-							<div class="row">
-								<div class="6u 12u(narrower)">
-
-									<section>
-										<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Hyperspace Travel</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-									</section>
-
-								</div>
-								<div class="6u 12u(narrower)">
-
-									<section>
-										<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>And Another Train</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-									</section>
-
-								</div>
-							</div>
-
-							<footer class="major">
-								<ul class="buttons">
-									<li><a href="#" class="button">See More</a></li>
-								</ul>
-							</footer>
-
-						</section>
-
-				</article>
-
-			<!-- CTA -->
-				<section id="cta">
-
-					<header>
-						<h2>Ready to do <strong>something</strong>?</h2>
-						<p>Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.</p>
-					</header>
-					<footer>
-						<ul class="buttons">
-							<li><a href="#" class="button special">Take My Money</a></li>
-							<li><a href="#" class="button">LOL Wut</a></li>
-						</ul>
-					</footer>
-
-				</section>
-
-			<!-- Footer -->
-				<footer id="footer">
-
-					<ul class="icons">
-						<li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
-						<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon circle fa-dribbble"><span class="label">Dribbble</span></a></li>
-					</ul>
-
-					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-				</footer>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollgress.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/swiper.jquery.min.js"></script>
-			<script src="assets/js/bootstrap.min.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
-	</body>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="assets/js/main.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
 </html>
