@@ -28,12 +28,12 @@
                 <header id="header" class="">
                     <div class="container clearfix">
                         <div class="logo">
-                            <a href="/"><img src="images/logo.png" alt=""></a>
+                            <a ui-sref="home"><img src="images/logo.png" alt=""></a>
                         </div>
                         <nav id="nav">
                             <ul>
-                                <li ng-class="getClass('/index')" class="current"><a ui-sref="index">Home</a></li>
-                                <li class="submenu">
+                                <li ng-class="getClass('/home')"><a ui-sref="home">Home</a></li>
+                                <li ng-class="getClass('/about')" class="submenu">
                                     <a ui-sref="about">About Us</a>
                                     <ul>
                                         <li><a href="left-sidebar.html">Our Solutions</a></li>
@@ -41,10 +41,10 @@
                                         <li><a href="no-sidebar.html">Get Involved</a></li>
                                     </ul>
                                 </li>
-                                <li class=""><a ui-sref="data">Data</a></li>
-                                <li class=""><a ui-sref="infographics">Infographics</a></li>
-                                <li class=""><a ui-sref="contact">Contact</a></li>
-                                <li class=""><a ui-sref="blog">Blog</a></li>
+                                <li ng-class="getClass('/data')" class=""><a ui-sref="data">Data</a></li>
+                                <li ng-class="getClass('/infographics')" class=""><a ui-sref="infographics">Infographics</a></li>
+                                <li ng-class="getClass('/contact')" class=""><a ui-sref="contact">Contact</a></li>
+                                <li ng-class="getClass('/blog')" class=""><a ui-sref="blog">Blog</a></li>
                             </ul>
                         </nav>
                     </div>

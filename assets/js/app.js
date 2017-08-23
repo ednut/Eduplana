@@ -45,4 +45,9 @@
 	      templateUrl: "partials/blogDetails.html"
 	    })
 
+	    .state('error', {
+	      url: "/error",
+	      templateUrl: "404.html"
+	    })
+
 	});

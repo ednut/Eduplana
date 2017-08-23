@@ -1,8 +1,10 @@
 'use strict';
 var app = angular.module('myApp.controllers');
 
-app.controller('generalController', function($scope) {
+app.controller('generalController', function($scope, $location) {
 	
-    $scope.message = 'Hello World';
+    $scope.getClass = function (path) {
+	  return ($location.path().substr(0, path.length) === path) ? 'current' : '';
+	}
 
 });
