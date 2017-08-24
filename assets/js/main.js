@@ -131,4 +131,17 @@ $(window).load(function(){
 
 });
 
-$(".select").select2();
+
+
+$(window).load(function(){
+
+	$('.myImg').click(function(){
+		$('.myImgModal').css("display", "block");
+		let img = $(this).attr('data-src');
+		$('.img01').attr("src",img);
+	})
+
+	$('.myImgModal .Imgclose').click(function(){
+		$('.myImgModal').hide()
+	})
+});
