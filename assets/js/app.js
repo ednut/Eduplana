@@ -20,6 +20,16 @@
 	      templateUrl: "partials/about.html"
 	    })
 
+	    .state('ourSolution', {
+	      url: "/ourSolution",
+	      templateUrl: "partials/ourSolution.html"
+	    })
+
+	    .state('getInvolved', {
+	      url: "/getInvolved",
+	      templateUrl: "partials/getInvolved.html"
+	    })
+
 	    .state('data', {
 	      url: "/data",
 	      templateUrl: "partials/data.html"
@@ -41,7 +51,7 @@
 	    })
 
 	    .state('blogDetails', {
-	      url: "/blog",
+	      url: "/blogDetails",
 	      templateUrl: "partials/blogDetails.html"
 	    })
 
