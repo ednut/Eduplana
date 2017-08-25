@@ -50,6 +50,21 @@
 	      templateUrl: "partials/blog.html"
 	    })
 
+	    .state('qualityEducation', {
+	      url: "/qualityEducation",
+	      templateUrl: "partials/qualityEducation.html"
+	    })
+
+	    .state('outOfSchoolProject', {
+	      url: "/outOfSchoolProject",
+	      templateUrl: "partials/outOfSchoolProject.html"
+	    })
+
+	    .state('studentOnline', {
+	      url: "/studentOnline",
+	      templateUrl: "partials/studentOnline.html"
+	    })
+
 	    .state('blogDetails', {
 	      url: "/blogDetails",
 	      templateUrl: "partials/blogDetails.html"

@@ -141,7 +141,11 @@ $(window).load(function(){
 		$('.img01').attr("src",img);
 	})
 
-	$('.myImgModal .Imgclose').click(function(){
+	$('.myImgModal').click(function(){
+		$('.myImgModal').hide()
+	})
+
+	$('.Imgclose').click(function(){
 		$('.myImgModal').hide()
 	})
 });
