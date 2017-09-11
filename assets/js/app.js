@@ -56,17 +56,22 @@
 	    })
 
 	    .state('outOfSchoolProject', {
-	      url: "/outOfSchoolProject",
+	      url: "/out-of-school-project",
 	      templateUrl: "partials/outOfSchoolProject.html"
 	    })
 
 	    .state('studentOnline', {
-	      url: "/studentOnline",
+	      url: "/student-online",
 	      templateUrl: "partials/studentOnline.html"
 	    })
 
+	    .state('public-education', {
+	      url: "/public-education",
+	      templateUrl: "partials/public-education.html"
+	    })
+
 	    .state('blogDetails', {
-	      url: "/blogDetails",
+	      url: "/blog-details",
 	      templateUrl: "partials/blogDetails.html"
 	    })
 

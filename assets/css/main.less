@@ -1876,20 +1876,19 @@ input[type="reset"].small,
 .wrapper.style1 {
     padding: 0;
 }
-.style2 {
-    // background-color: #0b5c2f;
+.infographicsFeatureWrap {
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    // height: 42em;
     color: #fff;
     text-align: center;
-    padding: 1em 5em 5em 3em;
+    width: 100%;
+    height: auto;
 }
-.style2 img{
+.infographicsFeatureWrap img{
     width: auto;
     height: 100%;
-    margin-bottom: 2em;
+    margin-bottom: 5em;
 }
 .wrapper.style2 .button:hover {
     background: rgba(255, 255, 255, 0.15) !important;
@@ -2252,13 +2251,17 @@ body.index #main {
     display: block;
     margin-left: 1em;
     padding-left: 1em;
-    border-left: dotted 1px;
 }
 #footer .copyright li:first-child {
     margin: 0;
     padding: 0;
     border: 0;
     padding-bottom: 15px;
+}
+#footer .fotIcon{
+    color: #0b5c2f;
+    display: inline-block;
+    padding-left: 5px;
 }
 /* Wide */
 
@@ -2852,13 +2855,13 @@ section.banner .swiper-slide {
   height: 33em;
   width: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
   background-position: center top;
   position: relative;
   cursor: -webkit-grab;
 }
 section.banner .swiper-slide .overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2921,91 +2924,118 @@ section.banner .swiper-slide .overlay a.Dbtn:hover {
 
 
 
-    .infographic_wrap{
-        width: 100%;
-        overflow: hidden;
-        height: 280px;
-        .img{
-            width: 100%;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-position: center top;
-            background-size: cover;
-        }
-        img{
-            height: auto;
-            width: 100%;
-        }
+.infographic_wrap{
+    width: 100%;
+    overflow: hidden;
+    height: 280px;
+    .img{
+        width: auto;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
     }
-    .infographCaption a{
-        display: block;
+    a{
         text-decoration: none;
-        color: inherit;
         border: none;
-        padding: 10px;
-        font-size: 25px;
     }
-    .myImg {
-        cursor: pointer;
-        transition: 0.3s;
+    img{
+        height: auto;
+        width: 100%;
     }
-    /* The Modal (background) */
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-    }
+}
+.infographCaption a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    padding: 10px;
+    font-size: 25px;
+}
+.myImg {
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
 
-    /* Modal Content (image) */
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+.Imgcaption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, .Imgcaption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.Imgclose {
+    position: absolute;
+    top: 100px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
     .modal-content {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
+        width: 100%;
     }
-
-    /* Caption of Modal Image */
-    .Imgcaption {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
-        text-align: center;
-        color: #ccc;
-        padding: 10px 0;
-        height: 150px;
-    }
-
-    /* Add Animation */
-    .modal-content, .Imgcaption {    
-        -webkit-animation-name: zoom;
-        -webkit-animation-duration: 0.6s;
-        animation-name: zoom;
-        animation-duration: 0.6s;
-    }
-
-    @-webkit-keyframes zoom {
-        from {-webkit-transform:scale(0)} 
-        to {-webkit-transform:scale(1)}
-    }
-
-    @keyframes zoom {
-        from {transform:scale(0)} 
-        to {transform:scale(1)}
-    }
-
-    /* The Close Button */
     .Imgclose {
         position: absolute;
-        top: 100px;
+        top: 50px;
         right: 35px;
         color: #fff;
         font-size: 40px;
@@ -3013,30 +3043,7 @@ section.banner .swiper-slide .overlay a.Dbtn:hover {
         transition: 0.3s;
         cursor: pointer;
     }
-
-    .close:hover,
-    .close:focus {
-        color: #bbb;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    /* 100% Image Width on Smaller Screens */
-    @media only screen and (max-width: 700px){
-        .modal-content {
-            width: 100%;
-        }
-        .Imgclose {
-            position: absolute;
-            top: 50px;
-            right: 35px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-    }
+}
 a.button:hover{
     text-decoration: none;
     color: #0b5c2f;
@@ -3049,6 +3056,7 @@ a.button:hover{
     background-size: cover;
     margin-bottom: 30px;
     position: relative;
+    cursor: pointer;
     .overlay{
         position: absolute;
         right: 0;

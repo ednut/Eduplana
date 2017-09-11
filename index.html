@@ -9,10 +9,12 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css">
 
         <link rel="stylesheet" href="assets/css/bootstrap.css" />
         <link rel="stylesheet" href="assets/css/swiper.min.css" />
         <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
     </head>
     <body ng-controller="generalController">
@@ -33,14 +35,15 @@
                         <nav id="nav">
                             <ul>
                                 <li ng-class="{ current: isActive('/')}"><a ui-sref="home">Home</a></li>
-                                <li ng-class="{ current: isActive('/about')}" class="submenu">
+                                <li ng-class="{ current: isActive('/about')}"><a ui-sref="about">About Us</a></li>
+                                <!-- <li ng-class="{ current: isActive('/about')}" class="submenu">
                                     <a ui-sref="about">About Us</a>
                                     <ul>
                                         <li><a ui-sref="ourSolution">Our Solutions</a></li>
-                                        <!-- <li><a href="right-sidebar.html">2017 Education Fund</a></li> -->
+                                        <li><a href="right-sidebar.html">2017 Education Fund</a></li>
                                         <li><a ui-sref="getInvolved">Get Involved</a></li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <li ng-class="{ current: isActive('/data')}"><a ui-sref="data">Data</a></li>
                                 <li ng-class="{ current: isActive('/infographics')}"><a ui-sref="infographics">Infographics</a></li>
                                 <li ng-class="{ current: isActive('/contact')}"><a ui-sref="contact">Contact</a></li>
@@ -65,8 +68,16 @@
                     </ul>
 
                     <ul class="copyright">
-                        <li>2nd Floor, Adepate House, 42, Montgomery Road, Yaba, Lagos State. (+234) 7062093584 <a href="mailto:info@eduplana.com">info@eduplana.com</a></li>
-                        <li>&copy; eduplana <script>var currentYear = new Date().getFullYear();document.write(currentYear);</script>. All Rights Reserved</li>
+                        <li>
+                            <span class="fotIcon"><i class="fa fa-address-book" aria-hidden="true"></i></span>
+                            2nd Floor, Adepate House, 42, Montgomery Road, Yaba, Lagos State.                             <span class="fotIcon"><i class="fa fa-phone" aria-hidden="true"></i> (+234) 7062093584 
+                            <span class="fotIcon"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@eduplana.com">info@eduplana.com</a>
+                        </li>
+                        <li>
+                            &copy; eduplana 
+                            <script>var currentYear = new Date().getFullYear();document.write(currentYear);</script>. 
+                            All Rights Reserved
+                        </li>
                     </ul>
 
                     <div class="text-center">
@@ -80,6 +91,7 @@
 
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
         <script src="assets/js/jquery.scrolly.min.js"></script>
         <script src="assets/js/jquery.scrollgress.min.js"></script>
         <script src="assets/js/skel.min.js"></script>

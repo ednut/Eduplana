@@ -133,19 +133,14 @@ $(window).load(function(){
 
 
 
-$(window).load(function(){
+$(window).load(function() {
 
-	$('.myImg').click(function(){
-		$('.myImgModal').css("display", "block");
-		let img = $(this).attr('data-src');
-		$('.img01').attr("src",img);
-	})
-
-	$('.myImgModal').click(function(){
-		$('.myImgModal').hide()
-	})
-
-	$('.Imgclose').click(function(){
-		$('.myImgModal').hide()
-	})
+	$("a.popup").fancybox({
+		'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	false
+	});
+	
 });
